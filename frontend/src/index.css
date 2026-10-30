@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* ======================================================
+   DESIGN TOKENS
+====================================================== */
+
+:root {
+
+  /* Brand */
+
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+
+  --success: #10b981;
+  --success-hover: #059669;
+
+  --warning: #f59e0b;
+
+  --danger: #e11d48;
+
+  /* Background */
+
+    --background: #e9edf3;
+
+    --surface: #ffffff;
+
+  /* Sidebar */
+
+  --sidebar: #0f172a;
+  --sidebar-hover: #1e293b;
+  --sidebar-active: #4f46e5;
+
+  /* Text */
+
+  --text: #0f172a;
+  --text-secondary: #64748b;
+
+  /* Border */
+
+  --border: #e2e8f0;
+
+  /* Shadow */
+
+  --shadow: 0 1px 3px rgba(15,23,42,.08);
+
+  /* Radius */
+
+  --radius: 12px;
+
+}
+
+/* ======================================================
+   DARK MODE
+====================================================== */
+
+.dark {
+
+  --background: #0f172a;
+
+  --surface: #1e293b;
+
+  --sidebar: #020617;
+  --sidebar-hover: #1e293b;
+  --sidebar-active: #4f46e5;
+
+  --text: #f8fafc;
+
+  --text-secondary: #94a3b8;
+
+  --border: #334155;
+
+}
+
+/* ======================================================
+   BASE
+====================================================== */
+
+html,
+body,
+#root{
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    transition:
+        background .25s,
+        color .25s;
+
+}
+
+/* ======================================================
+   UTILITIES
+====================================================== */
+
+.bg-app{
+    background:var(--background);
+}
+
+.bg-surface{
+    background:var(--surface);
+}
+
+.bg-sidebar{
+    background:var(--sidebar);
+}
+
+.text-app{
+    color:var(--text);
+}
+
+.text-secondary{
+    color:var(--text-secondary);
+}
+
+.border-app{
+    border-color:var(--border);
+}
+
+.shadow-app{
+    box-shadow:var(--shadow);
+}
+
+.rounded-app{
+    border-radius:var(--radius);
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 116, 139, .45) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    overflow-y:auto;
+    scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, .45);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, .65);
+}
+
+.dark * {
+    scrollbar-color: rgba(148, 163, 184, .35) transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, .35);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, .55);
+}

@@ -1,0 +1,13 @@
+export const MODULOS = Object.freeze({
+  USUARIOS: "USUARIOS",
+  CATEGORIAS: "CATEGORIAS",
+  PRODUCTOS: "PRODUCTOS",
+  VENTAS: "VENTAS",
+});
+
+export const ACCIONES = Object.freeze({
+  CREAR: "CREAR",
+  ACTUALIZAR: "ACTUALIZAR",
+  CAMBIAR_ESTADO: "CAMBIAR_ESTADO",
+  ANULAR: "ANULAR",
+});
